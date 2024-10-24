@@ -19,7 +19,7 @@ DahuaEventsDMT es una integración personalizada para Home Assistant utilizando 
 
 ### 1. Clonar el repositorio
 
-Clona este repositorio en tu servidor Home Assistant:
+Clona este repositorio en tu instancia de prueba para testear.
 
 ```bash
 git clone https://github.com/jaaneo/DahuaEventsDMT.git
