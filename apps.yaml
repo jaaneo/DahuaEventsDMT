@@ -1,0 +1,16 @@
+DahuaEvents:
+  module: DahuaEvents
+  class: DahuaEvents
+  cameras:
+    - host: ip_camera
+      name: camera_01
+      port: 80
+      user: user_camera
+      pass: pass_camera
+      events: [CrossLineDetection,CrossRegionDetection]
+    - host: ip_camera
+      name: camera_02
+      port: 80
+      user: user_camera
+      pass: pass_camera
+      events: [CrossLineDetection,CrossRegionDetection]
