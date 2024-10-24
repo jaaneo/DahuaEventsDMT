@@ -1,0 +1,29 @@
+|
+Configuración de sensores de movimiento que 
+son usados para detectar si hay movimiento en 
+las zonas de interés a través de cámaras de seguridad.
+template:
+  - binary_sensor:
+      # Sensor 1: Cruce Línea Termal Puyehue
+      - name: "Cruce Línea Termal Puyehue"
+        unique_id: "cruce_linea_termal_puyehue"
+        device_class: motion
+        state: "{{ is_state('binary_sensor.cruce_linea_termal_puyehue', 'on') }}"
+        icon: >-
+          {% if is_state('binary_sensor.cruce_linea_termal_puyehue', 'on') %}
+            mdi:motion-sensor
+          {% else %}
+            mdi:motion-sensor-off
+          {% endif %}
+      
+      # Sensor 2: Cruce Región Termal Puyehue
+      - name: "Cruce Región Termal Puyehue"
+        unique_id: "cruce_region_termal_puyehue"
+        device_class: motion
+        state: "{{ is_state('binary_sensor.cruce_region_termal_puyehue', 'on') }}"
+        icon: >-
+          {% if is_state('binary_sensor.cruce_region_termal_puyehue', 'on') %}
+            mdi:motion-sensor
+          {% else %}
+            mdi:motion-sensor-off
+          {% endif %}
